@@ -40,14 +40,17 @@ public class Pokemon {
 
   @Override
   public boolean equals(Object toCompare_object) {
-      if (this == toCompare_object) return true;
-      if (!(toCompare_object instanceof Pokemon)) return false;
-      Pokemon pokemon = (Pokemon) toCompare_object;
-      return Objects.equals(id, pokemon.id) &&
-              Objects.equals(name, pokemon.name) &&
-              Objects.equals(category, pokemon.category) &&
-              Objects.equals(hability, pokemon.hability) &&
-              Objects.equals(weight, pokemon.weight);
+    if (this == toCompare_object) return true;
+    
+    if (!(toCompare_object instanceof Pokemon)) return false;
+    
+    Pokemon pokemon = (Pokemon) toCompare_object;
+    
+    return Objects.equals(id, pokemon.id) &&
+      Objects.equals(name, pokemon.name) &&
+      Objects.equals(category, pokemon.category) &&
+      Objects.equals(hability, pokemon.hability) &&
+      Objects.equals(weight, pokemon.weight);
   }
 
   @Override
@@ -87,11 +90,11 @@ public class Pokemon {
     this.hability = hability;
   }
 
-  public double getweight() {
+  public double getWeight() {
     return this.weight;
   }
 
-  public void setweight(double weight) {
+  public void setWeight(double weight) {
     this.weight = weight;
   }
 }
